@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quote Generator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f9f9f9;
+    }
+    #quote {
+      font-size: 20px;
+      margin: 20px;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daily Motivation 💡</h1>
+  <p id="quote">Click the button to get your quote!</p>
+  <button onclick="generateQuote()">Generate Quote</button>
+
+  <script>
+    function generateQuote() {
+      const quotes = [
+        "Believe in yourself!",
+        "You are stronger than you think!",
+        "Keep going. You're doing great!",
+        "Every day is a fresh start.",
+        "You’ve got this!"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const selectedQuote = quotes[randomIndex];
+      document.getElementById("quote").textContent = selectedQuote;
+    }
+  </script>
+
+</body>
+</html>
